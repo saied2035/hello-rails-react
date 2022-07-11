@@ -1,22 +1,18 @@
-import React from "react"
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import PropTypes from "prop-types"
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from '../configureStore'
-import Greeting from './Greeting'
+import store from '../configureStore';
+import Greeting from './Greeting';
 
-const App = () =>  {
-
-    return (
-    <React.StrictMode>
+const App = () => (
+  <React.StrictMode>
     <Provider store={store}>
       <Router>
-      <Routes>
-        <Route path="/" element={<Greeting />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Greeting />} />
+        </Routes>
       </Router>
-      </Provider>
-      </React.StrictMode>
-    );
-}
-export default App
+    </Provider>
+  </React.StrictMode>
+);
+export default App;
